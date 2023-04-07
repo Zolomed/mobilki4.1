@@ -25,10 +25,13 @@ public class Fragment2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_2, container, false);
-        List<ClipData.Item> itemList = new ArrayList<>();
-
+        List<Item> itemList = new ArrayList<>();
+        for (int i = 0; i < 200; i++){
+            itemList.add(new Item(R.drawable.test,"Test"+i));
+        }
         ListView List = view.findViewById(R.id.itemsList);
         CustomAdapter adapter = new CustomeAdapter(getContext(),R.layout.custom, itemList);
         List.setAdapter(adapter);
+        List<ClipData.Item> itemList = new ArrayList<>();
     }
 }
