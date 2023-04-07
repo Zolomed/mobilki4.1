@@ -1,5 +1,3 @@
-package com.example.myapplication;
-
 import android.content.ClipData;
 import android.content.Context;
 import android.util.Log;
@@ -9,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.myapplication.R;
 
 import java.util.List;
 
