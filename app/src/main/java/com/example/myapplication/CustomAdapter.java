@@ -1,4 +1,5 @@
-import android.content.ClipData;
+package com.example.myapplication;
+
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,15 +9,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.myapplication.R;
+import com.example.myapplication.Item;
 
 import java.util.List;
 
-public class CustomAdapter extends ArrayAdapter<ClipData.Item> {
+public class CustomAdapter extends ArrayAdapter<Item> {
     private LayoutInflater inflater;
     private int layout;
-    private List<ClipData.Item> items;
-    public CustomAdapter(Context context, int resource, List<ClipData.Item> items) {
+    private List<Item> items;
+    public CustomAdapter(Context context, int resource, List<Item> items) {
         super(context, resource, items);
         this.items = items;
         this.layout = resource;
@@ -26,7 +27,7 @@ public class CustomAdapter extends ArrayAdapter<ClipData.Item> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = inflater.inflate(this.layout, parent, false);
 
-        ClipData.Item item = items.get(position);
+        Item item = items.get(position);
         Log.d("getView", item.getText());
 
         TextView textView = view.findViewById(R.id.CustomTextView);

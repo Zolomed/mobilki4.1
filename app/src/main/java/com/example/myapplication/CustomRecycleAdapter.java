@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,10 +15,10 @@ import java.util.List;
 
 public class CustomRecycleAdapter extends RecyclerView.Adapter<CustomRecycleAdapter.ViewHolder>{
 
-    private final LayoutInflater inflater; //to display
-    private final List<ClipData.Item> states;
+    private final LayoutInflater inflater;
+    private final List<Item> states;
 
-    CustomRecycleAdapter(Context context, List<ClipData.Item> states) {
+    CustomRecycleAdapter(Context context, List<Item> states) {
         this.states = states;
         this.inflater = LayoutInflater.from(context);
     }
@@ -32,7 +31,7 @@ public class CustomRecycleAdapter extends RecyclerView.Adapter<CustomRecycleAdap
 
     @Override
     public void onBindViewHolder(CustomRecycleAdapter.ViewHolder holder, int position) {
-        ClipData.Item state = states.get(position);
+        Item state = states.get(position);
         holder.nameView.setText(state.getText());
         holder.flagView.setImageResource(state.getImageId());
 

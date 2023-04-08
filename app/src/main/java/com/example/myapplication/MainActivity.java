@@ -16,4 +16,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container_view, inst).commit();
     }
+    public void replaceFragments(Fragment3 inst) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container_view, inst).commit();
+    }
 }
