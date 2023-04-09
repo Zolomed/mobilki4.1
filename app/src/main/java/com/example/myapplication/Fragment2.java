@@ -50,11 +50,11 @@ public class Fragment2 extends Fragment {
         for (int i = 0; i < 200; i++){
             itemList.add(new Item(R.drawable.test,"Test"+i));
         }
-        ListView LV = view.findViewById(R.id.itemsList);
+        ListView LiVi = view.findViewById(R.id.itemsList);
         CustomAdapter adapter = new CustomAdapter(getContext(),R.layout.custom,itemList);
-        LV.setAdapter(adapter);
+        LiVi.setAdapter(adapter);
 
-        LV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        LiVi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getContext(),((TextView) view.findViewById(R.id.CustomTextView)).getText(),
